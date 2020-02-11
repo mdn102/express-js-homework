@@ -1,6 +1,6 @@
 ![General Assembly Logo](http://i.imgur.com/ke8USTq.png)
 
-# Express Weather App (Part #1)
+# Express Weather App
 
 ## Objectives
 * Build an Express web app that includes a GET and POST request to get the location of our user, and then return data that we will use when learning about API calls to query for the weather in the users location. 
