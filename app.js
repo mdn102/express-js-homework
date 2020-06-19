@@ -19,9 +19,8 @@ app.get('/weather/:zipcode', (req, res) => {
       console.log('💩💩💩💩💩💩💩💩💩💩💩💩💩💩')
       console.log(err);
     }
-    console.log(JSON.stringify(result, null, 2));
     res.send(result)
-    // res.render('results', { zipcode: req.params.zipcode, result: result })
+    // res.render('results', { zipcode: req.params.zipcode, result: result[0] })
   });
   // res.send(`Results for ${req.params.zipcode}`);
 })
