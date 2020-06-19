@@ -12,15 +12,15 @@ app.get('/', (req, res) => {
 })
 
 // - `/weather/:zipcode`: a GET route that returns the weather data for whichever zipcode the user passes to route; this is a results page that displays the weather in the location given by the user. Display whichever data points from your `Weather-JS` call that you find relevant/interesting. 
-app.get('/weather/:query', (req, res) => {
+app.get('/weather/', (req, res) => {
   // Literally just took it from the docs
-  weather.find({search: req.params.query, degreeType: 'F'}, function(err, result) {
+  weather.find({search: req.query.zipcode, degreeType: 'F'}, function(err, result) {
     if(err) {
       console.log('💩💩💩💩💩💩💩💩💩💩💩💩💩💩')
       console.log(err);
     }
     // res.send(result)
-    res.render('results', { query: req.params.query, result: result[0] })
+    res.render('results', { query: req.query.zipcode, result: result[0] })
   });
   // res.send(`Results for ${req.params.query}`);
 })

@@ -3,9 +3,8 @@
 # Express Weather App
 
 ## Objectives
-* Build an Express web app that includes a GET and POST request to get the location of our user, and then return data that we will use when learning about API calls to query for the weather in the users location. 
+* Build an Express web app that includes a GET request to get the location of our user, and then display that data.
 * Use a new NPM package, [Weather-JS](https://www.npmjs.com/package/weather-js).
-* Declare/create x1 template for your pages to inherit from, and use in your app. 
 * Use best practices when writing code and in organizing your routes. 
 
 ## Getting Started
@@ -20,12 +19,14 @@
 ## Requirements/App Map
 
 * App should include the following routes/views:
-  - `/`: homepage that includes some instructions for the user, and a form that includes a text input and a submit button. The text input should query for a zipcode, and the form should then as a post method send the zipcode to your backend for use. This route should take both GET and POST methods. 
-  - `/weather/:zipcode`: a GET route that returns the weather data for whichever zipcode the user passes to route; this is a results page that displays the weather in the location given by the user. Display whichever data points from your `Weather-JS` call that you find relevant/interesting. 
+  - `/`: homepage that includes some instructions for the user, and a form that includes a text input and a submit button. The text input should query for a zipcode, and the form should then—as a get method—send the zipcode to your backend for use. This route should take both GET methods. 
+  - `/weather`: a GET route that returns the weather data for whichever zipcode the user passes to route, you will need to access the zipcode from the form; this is a results page that displays the weather in the location given by the user. Display whichever data points from your `Weather-JS` call that you find relevant/interesting. 
 
 ## Bonuses
 * Write an if statement that passes one template if the weather is "nice" outside, and another if it is not. 
 * Write a function that queries a random zipcode for the weather, and returns the `/weather/:zipcode` route with the result. 
+* Use a template
+* Try to style
 
 ---
 
