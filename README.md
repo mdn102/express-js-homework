@@ -3,7 +3,7 @@
 # Express Weather App
 
 ## Objectives
-* Build an Express web app that includes a GET and POST request to get the location of our user, and then return data that we will use when learning about API calls to query for the weather in the users location. 
+* Build an Express web app that includes a GET request to get the location of our user, and then return data that we will use when learning about API calls to query for the weather in the users location. 
 * Use a new NPM package, [Weather-JS](https://www.npmjs.com/package/weather-js).
 * Declare/create x1 template for your pages to inherit from, and use in your app. 
 * Use best practices when writing code and in organizing your routes. 
