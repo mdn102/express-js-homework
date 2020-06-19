@@ -15,7 +15,6 @@
 * Run `npm init` to setup our folder. 
 * Install your dependencies (Express, EJS, [Weather-JS](https://www.npmjs.com/package/weather-js)). 
 * Create a .gitignore file
-* Run `git init` to initialize git in folder. 
 * Start writing out Express app in `app.js`.
 
 ## Requirements/App Map
