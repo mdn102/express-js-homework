@@ -1,4 +1,5 @@
 const express = require('express');
+const weather = require('weather-js');
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -12,8 +13,14 @@ app.get('/', (req, res) => {
 
 // - `/weather/:zipcode`: a GET route that returns the weather data for whichever zipcode the user passes to route; this is a results page that displays the weather in the location given by the user. Display whichever data points from your `Weather-JS` call that you find relevant/interesting. 
 app.get('/weather/:zipcode', (req, res) => {
+  // Literally just took it from the docs
+  weather.find({search: req.params.zipcode, degreeType: 'F'}, function(err, result) {
+    if(err) console.log(err);
+    console.log(JSON.stringify(result, null, 2));
+    res.send(result)
+    // res.render('results', { zipcode: req.params.zipcode })
+  });
   // res.send(`Results for ${req.params.zipcode}`);
-  res.render('results')
 })
 
 app.listen(3000, () => console.log("☕️ You're listening to the smooth sounds of port 3000 ☕️"));
