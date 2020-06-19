@@ -21,8 +21,7 @@
 
 * App should include the following routes/views:
   - `/`: homepage that includes some instructions for the user, and a form that includes a text input and a submit button. The text input should query for a zipcode, and the form should then as a post method send the zipcode to your backend for use. This route should take both GET and POST methods. 
-  - `/weather`: a results page that displays the weather in the location given by the user. Display whichever data points from your `Weather-JS` call that you find relevant/interesting. 
-  - `/weather/:zipcode`: a GET route that returns the weather data for whichever zipcode the user passes to route. 
+  - `/weather/:zipcode`: a GET route that returns the weather data for whichever zipcode the user passes to route; this is a results page that displays the weather in the location given by the user. Display whichever data points from your `Weather-JS` call that you find relevant/interesting. 
 
 ## Bonuses
 * Write an if statement that passes one template if the weather is "nice" outside, and another if it is not. 
