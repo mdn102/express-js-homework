@@ -15,10 +15,13 @@ app.get('/', (req, res) => {
 app.get('/weather/:zipcode', (req, res) => {
   // Literally just took it from the docs
   weather.find({search: req.params.zipcode, degreeType: 'F'}, function(err, result) {
-    if(err) console.log(err);
+    if(err) {
+      console.log('💩💩💩💩💩💩💩💩💩💩💩💩💩💩')
+      console.log(err);
+    }
     console.log(JSON.stringify(result, null, 2));
     res.send(result)
-    // res.render('results', { zipcode: req.params.zipcode })
+    // res.render('results', { zipcode: req.params.zipcode, result: result })
   });
   // res.send(`Results for ${req.params.zipcode}`);
 })
