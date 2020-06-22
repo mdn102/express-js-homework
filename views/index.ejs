@@ -5,14 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Forecast</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
 </head>
 <body>
     <div class="container">
-        <form>
-            <input type="number" class="input" placeholder="Enter a ZipCode" required>
-            <input type="submit" class="button" value="Get info">
+        <h1> How is the Forecast at your location today ?</h1>
+        <form action="/weather" method="GET">
+            <input name="zipcode"type="number" class="input" placeholder="Enter a ZipCode" required>
+            <input type="submit" class="button" value="Get Info">
         </form> 
+        <% if(weather !== null){ %>
+            <p><%= weather %></p>
+          <% } %>
+  
+          <% if(error !== null){ %>
+            <p><%= error %></p>
+          <% } %>
     </div>
 </body>
 </html>
