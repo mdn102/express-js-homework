@@ -8,10 +8,8 @@ app.use(express.static('public'));
 
 
 app.get('/', function (req, res) {
-    // res.send("You've reached the home route!");
     res.render('index', {weather: null, error: null});
   })
-
 
 app.get('/weather/', function (req, res) {
     weather.find({search: req.query.zipcode, degreeType: 'F'}, function(err, result) {
@@ -21,8 +19,6 @@ app.get('/weather/', function (req, res) {
         }
         res.render('forecast.ejs', {query: req.query.zipcode, result: result[0]})  
     });
-
-
 })
  
  
