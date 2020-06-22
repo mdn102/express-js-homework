@@ -17,7 +17,7 @@ app.get('/weather/', function (req, res) {
             console.log(err);
             console.log(JSON.stringify(result, null, 2));
         }
-        res.render('forecast.ejs', {query: req.query.zipcode, result: result[0]})  
+        res.render('data.ejs', {query: req.query.zipcode, result: result[0]})  
     });
 })
  
