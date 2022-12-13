@@ -21,7 +21,7 @@
   "homepage": "https://github.com/minhd-nguyen/express-js-homework#readme",
   "dependencies": {
     "ejs": "^3.1.3",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "request": "^2.88.2",
     "weather-js": "^2.0.0",
     "zipcodes": "^8.0.0"
